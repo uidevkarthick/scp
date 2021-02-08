@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <title>Selfcare Portal | Dashboard</title>
+        <!-- for less/css -->
+        <link rel="stylesheet/less" type="text/css" href="less/main.less" />
+        <!-- for chart -->
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" />
+        <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+        <script src="js/chartist-plugin-fill-donut.js"></script>
+    </head>
+
+    <body>
+        <div class="container-fluid no-pd">
+            <div class="sidebar-nav">
+                <div class="logo">
+                    <img src="images/logo.png" />
+                </div>
+                <ul class="navlink">
+                    <li class="crd active"><a href="">My Cards</a></li>
+                    <li class="trans"><a href="transactions.html">Transactions</a></li>
+                    <li class="ac-stgs"><a href="account-settings.html">Account Settings</a></li>
+                </ul>
+            </div>
+            <div class="content-sec">
+                <div class="content-cen">
+                    <div class="user-tlt-sec">
+                        <h2>Hello Magalya</h2>
+                        <p>Welcome Back!</p>
+                    </div>
+                    <div class="container-cen-inn">
+                        <div class="cont-cen-inn">
+                            <div class="tlt-sec">
+                                <p>Spend Summary - Dec 2020</p>
+                                <span>
+                                    <a href="" data-toggle="tooltip" data-placement="top"
+                                        title="You can add and edit monthly limits for each preferences">Edit
+                                        Preferences</a>
+                                </span>
+                            </div>
+                            <div class="inn-tabs">
+                                <div class="tab-filt-sec">
+                                    <ul class="nav nav-tabs" id="summer" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="monthlylimit" data-toggle="tab"
+                                                href="#mnthlmt" role="tab" aria-controls="mnthlmt"
+                                                aria-selected="true">Monthly Limit</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="categorymonth" data-toggle="tab" href="#catmtn"
+                                                role="tab" aria-controls="catmtn" aria-selected="false">Category</a>
+                                        </li>
+                                    </ul>
+                                    <span class="filt-tab-crd"></span>
+                                </div>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="mnthlmt" role="tabpanel"
+                                        aria-labelledby="monthlylimit">
+                                        <div class="summery-card">
+                                            <div class="crd-icn cash"><img src="images/cards/cash.svg" /></div>
+                                            <div class="crd-cont">
+                                                <span class="tlt">Cash</span>
+                                                <span class="tlt-dlt">
+                                                    <p>Amount Spent <span>₹ 1281.00</span></p>
+                                                    <div class="progress">
+                                                        <div class="progress-bar" style="width:70%"></div>
+                                                    </div>
+                                                </span>
+                                                <span class="tlt-dlt amt-rem">
+                                                    <p>Amount Remaining <span>₹ 1281.00</span></p>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="summery-card crd-swipe">
+                                            <div class="crd-icn swipe"><img src="images/cards/card-swipe.svg" /></div>
+                                            <div class="crd-cont">
+                                                <span class="tlt">Card Swipe</span>
+                                                <span class="tlt-dlt">
+                                                    <p>Amount Spent <span>₹ 1281.00</span></p>
+                                                    <div class="progress">
+                                                        <div class="progress-bar" style="width:70%"></div>
+                                                    </div>
+                                                </span>
+                                                <span class="tlt-dlt amt-rem">
+                                                    <p>Amount Remaining <span>₹ 1281.00</span></p>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="summery-card online">
+                                            <div class="crd-icn use-online"><img src="images/cards/online.svg" /></div>
+                                            <div class="crd-cont">
+                                                <span class="tlt">Online</span>
+                                                <span class="tlt-dlt">
+                                                    <p>Amount Spent <span>₹ 1281.00</span></p>
+                                                    <div class="progress">
+                                                        <div class="progress-bar" style="width:70%"></div>
+                                                    </div>
+                                                </span>
+                                                <span class="tlt-dlt amt-rem">
+                                                    <p>Amount Remaining <span>₹ 1281.00</span></p>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="summery-card contectless">
+                                            <div class="crd-icn cless"><img src="images/cards/online.svg" /></div>
+                                            <div class="crd-cont">
+                                                <span class="tlt">Online</span>
+                                                <span class="tlt-dlt">
+                                                    <p>Amount Spent <span>₹ 1281.00</span></p>
+                                                    <div class="progress">
+                                                        <div class="progress-bar" style="width:70%"></div>
+                                                    </div>
+                                                </span>
+                                                <span class="tlt-dlt amt-rem">
+                                                    <p>Amount Remaining <span>₹ 1281.00</span></p>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="catmtn" role="tabpanel"
+                                        aria-labelledby="categorymonth">
+                                        <div class="tab-chart">
+                                            <div class="ct-chart ct-perfect-fourth donut-chart"></div>
+                                        </div>
+                                        <div class="chart-tble">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">category</th>
+                                                        <th scope="col">Utilised</th>
+                                                        <th scope="col">SPENT</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="tblcrd fuel"><img
+                                                                    src="images/chart-table/fuel.svg" /></span>Fuel
+                                                        </td>
+                                                        <td>35%</td>
+                                                        <td>₹ 1230.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="tblcrd shop"><img
+                                                                    src="images/chart-table/shop.svg" /></span>Shopping
+                                                        </td>
+                                                        <td>25%</td>
+                                                        <td>₹ 2285.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="tblcrd med"><img
+                                                                    src="images/chart-table/medi.svg" /></span>Medicine
+                                                        </td>
+                                                        <td>20%</td>
+                                                        <td>₹ 1809.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span class="tblcrd oth"><img
+                                                                    src="images/chart-table/other.svg" /></span>Others
+                                                        </td>
+                                                        <td>15%</td>
+                                                        <td>₹ 1302.00</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cover-bar"></div>
+                        </div>
+                        <div class="cont-cen-inn trans-inn">
+                            <div class="tlt-sec">
+                                <p>Recent Transactions</p>
+                                <span class="v-all">
+                                    <a href="">View all</a>
+                                </span>
+                            </div>
+                            <div class="inn-tabs">
+                                <div class="tab-filt-sec">
+                                    <ul class="nav nav-tabs" id="summer" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="spent" data-toggle="tab" href="#spents"
+                                                role="tab" aria-controls="spents" aria-selected="true">Spent</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="recv" data-toggle="tab" href="#revsec" role="tab"
+                                                aria-controls="revsec" aria-selected="false">Received</a>
+                                        </li>
+                                    </ul>
+                                    <span class="filt-tab-crd"></span>
+                                </div>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="spents" role="tabpanel"
+                                        aria-labelledby="spent">
+                                        <div class="transsection">
+                                            <div class="trans-bx-bydate">
+                                                <span class="date">Dec 31, 2020</span>
+                                                <div class="trans-bx">
+                                                    <div class="trans-tp online">
+                                                        <div class="trans-tlt">
+                                                            <span class="trans-tlts">Google Play Music LLC.</span>
+                                                            <span class="trans-typ">Online Transaction</span>
+                                                        </div>
+                                                        <div class="trans-amt">
+                                                            <span>₹</span>99.00 </div>
+                                                    </div>
+                                                    <div class="trans-drop">
+                                                        <div class="drop-tbl">
+                                                            <table class="table">
+                                                                <tr>
+                                                                    <td>
+                                                                        <span>Time</span>
+                                                                        <span>12:30pm, 31/12/2020</span></td>
+                                                                    <td>
+                                                                        <span>Status</span>
+                                                                        <span
+                                                                            class="status-success">Debit/Success</span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <span>Ref ID</span>
+                                                                        <span>1234567890</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span>Curr.</span>
+                                                                        <span>INR</span>
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <span class="dwnld-btn">Download Receipt</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="trans-bx">
+                                                    <div class="trans-tp crdswipe">
+                                                        <div class="trans-tlt">
+                                                            <span class="trans-tlts">D&G Apparels, Chen...</span>
+                                                            <span class="trans-typ">Card Swipe</span>
+                                                        </div>
+                                                        <div class="trans-amt">
+                                                            <span>₹</span>78.45 </div>
+                                                    </div>
+                                                    <div class="trans-drop">
+                                                        <div class="drop-tbl">
+                                                            <table class="table">
+                                                                <tr>
+                                                                    <td>
+                                                                        <span>Time</span>
+                                                                        <span>12:30pm, 31/12/2020</span></td>
+                                                                    <td>
+                                                                        <span>Status</span>
+                                                                        <span
+                                                                            class="status-success">Debit/Success</span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <span>Ref ID</span>
+                                                                        <span>1234567890</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span>Curr.</span>
+                                                                        <span>INR</span>
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <span class="dwnld-btn">Download Receipt</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="trans-bx-bydate">
+                                                <span class="date">Dec 31, 2020</span>
+                                                <div class="trans-bx">
+                                                    <div class="trans-tp cash">
+                                                        <div class="trans-tlt">
+                                                            <span class="trans-tlts">ATM Withdrawal, Chr...</span>
+                                                            <span class="trans-typ">Cash Withdrawal</span>
+                                                        </div>
+                                                        <div class="trans-amt alertamt">
+                                                            <span>₹</span>1178.45 </div>
+                                                        <span class="whyalrt">Why this happened?</span>
+                                                    </div>
+                                                    <div class="trans-drop">
+                                                        <div class="drop-tbl">
+                                                            <table class="table">
+                                                                <tr>
+                                                                    <td>
+                                                                        <span>Time</span>
+                                                                        <span>12:30pm, 31/12/2020</span></td>
+                                                                    <td>
+                                                                        <span>Status</span>
+                                                                        <span
+                                                                            class="status-success">Debit/Success</span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <span>Ref ID</span>
+                                                                        <span>1234567890</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span>Curr.</span>
+                                                                        <span>INR</span>
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <span class="dwnld-btn">Download Receipt</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="trans-bx">
+                                                    <div class="trans-tp online">
+                                                        <div class="trans-tlt">
+                                                            <span class="trans-tlts">Amazon inc.</span>
+                                                            <span class="trans-typ">Online Transaction</span>
+                                                        </div>
+                                                        <div class="trans-amt">
+                                                            <span>₹</span>78.45 </div>
+                                                    </div>
+                                                    <div class="trans-drop">
+                                                        <div class="drop-tbl">
+                                                            <table class="table">
+                                                                <tr>
+                                                                    <td>
+                                                                        <span>Time</span>
+                                                                        <span>12:30pm, 31/12/2020</span></td>
+                                                                    <td>
+                                                                        <span>Status</span>
+                                                                        <span
+                                                                            class="status-success">Debit/Success</span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <span>Ref ID</span>
+                                                                        <span>1234567890</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span>Curr.</span>
+                                                                        <span>INR</span>
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <span class="dwnld-btn">Download Receipt</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="trans-bx">
+                                                    <div class="trans-tp online">
+                                                        <div class="trans-tlt">
+                                                            <span class="trans-tlts">Amazon inc.</span>
+                                                            <span class="trans-typ">Online Transaction</span>
+                                                        </div>
+                                                        <div class="trans-amt">
+                                                            <span>₹</span>78.45 </div>
+                                                    </div>
+                                                    <div class="trans-drop">
+                                                        <div class="drop-tbl">
+                                                            <table class="table">
+                                                                <tr>
+                                                                    <td>
+                                                                        <span>Time</span>
+                                                                        <span>12:30pm, 31/12/2020</span></td>
+                                                                    <td>
+                                                                        <span>Status</span>
+                                                                        <span
+                                                                            class="status-success">Debit/Success</span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <span>Ref ID</span>
+                                                                        <span>1234567890</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span>Curr.</span>
+                                                                        <span>INR</span>
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <span class="dwnld-btn">Download Receipt</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="trans-bx-bydate">
+                                                <span class="date">Dec 31, 2020</span>
+                                                <div class="trans-bx">
+                                                    <div class="trans-tp cash">
+                                                        <div class="trans-tlt">
+                                                            <span class="trans-tlts">ATM Withdrawal, Chr...</span>
+                                                            <span class="trans-typ">Cash Withdrawal</span>
+                                                        </div>
+                                                        <div class="trans-amt">
+                                                            <span>₹</span>99.00 </div>
+                                                    </div>
+                                                    <div class="trans-drop">
+                                                        <div class="drop-tbl">
+                                                            <table class="table">
+                                                                <tr>
+                                                                    <td>
+                                                                        <span>Time</span>
+                                                                        <span>12:30pm, 31/12/2020</span></td>
+                                                                    <td>
+                                                                        <span>Status</span>
+                                                                        <span
+                                                                            class="status-success">Debit/Success</span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <span>Ref ID</span>
+                                                                        <span>1234567890</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span>Curr.</span>
+                                                                        <span>INR</span>
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <span class="dwnld-btn">Download Receipt</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="trans-bx">
+                                                    <div class="trans-tp online">
+                                                        <div class="trans-tlt">
+                                                            <span class="trans-tlts">Amazon inc.</span>
+                                                            <span class="trans-typ">Online Transaction</span>
+                                                        </div>
+                                                        <div class="trans-amt">
+                                                            <span>₹</span>78.45 </div>
+                                                    </div>
+                                                    <div class="trans-drop">
+                                                        <div class="drop-tbl">
+                                                            <table class="table">
+                                                                <tr>
+                                                                    <td>
+                                                                        <span>Time</span>
+                                                                        <span>12:30pm, 31/12/2020</span></td>
+                                                                    <td>
+                                                                        <span>Status</span>
+                                                                        <span
+                                                                            class="status-success">Debit/Success</span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <span>Ref ID</span>
+                                                                        <span>1234567890</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span>Curr.</span>
+                                                                        <span>INR</span>
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <span class="dwnld-btn">Download Receipt</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="trans-bx">
+                                                    <div class="trans-tp crdswipe">
+                                                        <div class="trans-tlt">
+                                                            <span class="trans-tlts">Amazon inc.</span>
+                                                            <span class="trans-typ">Card Swipe</span>
+                                                        </div>
+                                                        <div class="trans-amt">
+                                                            <span>₹</span>78.45 </div>
+                                                    </div>
+                                                    <div class="trans-drop">
+                                                        <div class="drop-tbl">
+                                                            <table class="table">
+                                                                <tr>
+                                                                    <td>
+                                                                        <span>Time</span>
+                                                                        <span>12:30pm, 31/12/2020</span></td>
+                                                                    <td>
+                                                                        <span>Status</span>
+                                                                        <span
+                                                                            class="status-success">Debit/Success</span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <span>Ref ID</span>
+                                                                        <span>1234567890</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span>Curr.</span>
+                                                                        <span>INR</span>
+                                                                    </td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <span class="dwnld-btn">Download Receipt</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="revsec" role="tabpanel" aria-labelledby="recv">
+                                        <div class="tab-chart">
+                                            <div class="ct-chart ct-perfect-fourth donut-chart"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cover-bar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-profile">
+                    <div class="profile-sec">
+                        <div class="notifi">
+                            <div class="notifi-drop">
+                                <div class="noti-tlt">
+                                    <p>Notifications</p>
+                                    <span>Close</span>
+                                </div>
+                                <div class="notifi-dlt-sec">
+                                    <div class="notofication mod">
+                                        <p class="noti-msg">You have reached 80% of Cash Withdrawal Limt.</p>
+                                        <span class="noti-lynk">Click here to increase Limit now</span>
+                                        <span class="noti-date">Dec 21, 2020 12: 30 PM</span>
+                                    </div>
+                                    <div class="notofication mod">
+                                        <p class="noti-msg">You have reached 80% of Cash Withdrawal Limt.</p>
+                                        <span class="noti-lynk">Click here to increase Limit now</span>
+                                        <span class="noti-date">Dec 21, 2020 12: 30 PM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="userprofile">
+                            <div class="user-sec">
+                                <span class="userimg"><img src="images/user.jpg" class="img-fluid" alt="" /></span>
+                                <span class="userdltsec">Aagaya Magalya</span>
+                                <span class="lout">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cont-cen-inn">
+                        <div class="tlt-sec">
+                            <p>My Card & Balances</p>
+                            <span class="v-all">
+                                <a href="" class="addcard">Add new card</a>
+                            </span>
+                        </div>
+                        <div class="cards-dlt-sec">
+                            <div class="urcard">
+                                <div class="crd-tp">
+                                    <p class="crdtxt">Total Available Balance</p>
+                                    <span class="crdamt">₹ 18,678.87 <span>of ₹ 50,000.00</span></span>
+                                    <div class="showcvv">Show CVV & Date</div>
+                                </div>
+                                <div class="crd-bt">
+                                    <div class="crdno">5894 6985 7843 5624 <span class="crdlogo"><img
+                                                src="images/crdtype.svg" /></span></div>
+                                    <span class="crd-mode">Virtual</span>
+                                </div>
+                            </div>
+                            <div class="crdbxs">
+                                <div class="crdbx phycard">Request Physical Card</div>
+                                <div class="crdbx chngpin">
+                                    <span class="crdbx-tlt">Change PIN</span>
+                                    <div class="chngpin-drop dropbxs">
+                                        <form>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" aria-describedby="emailHelp"
+                                                    placeholder="Enter Old PIN">
+                                                <span class="fget">Forgot PIN?</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Enter New PIN">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Confirm New PIN">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary btn-next">Change PIN</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="crdbx blkcrd">Block Card</div>
+                                <div class="crdbx actilog">
+                                    <span class="crdbx-tlt">Activity Log</span>
+                                    <div class="actilog-drop dropbxs">
+                                        <div class="logbx">
+                                            <span class="logstatus">PIN reset done successfully. New PIN sent to regd.
+                                                email</span>
+                                            <span class="logtme">Dec 21, 2020 12: 30 PM</span>
+                                        </div>
+                                        <div class="logbx">
+                                            <span class="logstatus">PIN reset done successfully. New PIN sent to regd.
+                                                email</span>
+                                            <span class="logtme">Dec 21, 2020 12: 30 PM</span>
+                                        </div>
+                                        <div class="logbx">
+                                            <span class="logstatus">PIN reset done successfully. New PIN sent to regd.
+                                                email</span>
+                                            <span class="logtme">Dec 21, 2020 12: 30 PM</span>
+                                        </div>
+                                        <div class="logbx">
+                                            <span class="logstatus">PIN reset done successfully. New PIN sent to regd.
+                                                email</span>
+                                            <span class="logtme">Dec 21, 2020 12: 30 PM</span>
+                                        </div>
+                                        <div class="logbx">
+                                            <span class="logstatus">PIN reset done successfully. New PIN sent to regd.
+                                                email</span>
+                                            <span class="logtme">Dec 21, 2020 12: 30 PM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="crdbx crdsupport">Support</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- popups -->
+        <div class="popup editprefrence" style="display: none;">
+            <div class="popup-cont">
+                <div class="pop-tlt-sec">
+                    <p class="pop-tlt">Edit Preferences</p>
+                    <span class="btn-sec">
+                        <button class="btn btn-cncl">Cancel</button>
+                        <button class="btn btn-submit">Continue</button>
+                    </span>
+                </div>
+                <div class="pop-cont-sec">
+                    <div class="pop-cont-tlt">Change Summary</div>
+                    <div class="pop-delt-bl">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Preference</th>
+                                    <th scope="col">Limit changes</th>
+                                    <th scope="col">Alert changes</th>
+                                    <th scope="col">Preference Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="tbl-crd">
+                                            <span class="crd-type crd-swipe">
+                                                <img src="images/cards/card-swipe.svg" />
+                                            </span>
+                                            <p>Card Swipe</p>
+                                        </span>
+                                    </td>
+                                    <td>Changed from 10,000 to 12,000</td>
+                                    <td>No change in alert</td>
+                                    <td>No change</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="tbl-crd">
+                                            <span class="crd-type cash">
+                                                <img src="images/cards/cash.svg" />
+                                            </span>
+                                            <p>Cash Withdrawal</p>
+                                        </span>
+                                    </td>
+                                    <td>Changed from 10,000 to 12,000</td>
+                                    <td>Alert set for 80%</td>
+                                    <td>No change</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="tbl-crd">
+                                            <span class="crd-type online">
+                                                <img src="images/cards/online.svg" />
+                                            </span>
+                                            <p>Card Swipe</p>
+                                        </span>
+                                    </td>
+                                    <td>No change in limit</td>
+                                    <td>No change in alert</td>
+                                    <td>No change</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="tbl-crd">
+                                            <span class="crd-type contless">
+                                                <img src="images/cards/online.svg" />
+                                            </span>
+                                            <p>Card Swipe</p>
+                                        </span>
+                                    </td>
+                                    <td>No change in limit</td>
+                                    <td>No change in alert</td>
+                                    <td>No change</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup forgototp" style="display: none;">
+            <div class="popup-cont fgoetmobile" style="display: none;">
+                <div class="pop-tlt-sec">
+                    <span class="tlt">Forgot PIN</span>
+                    <span class="bck">Back</span>
+                </div>
+                <div class="pop-cont-sec">
+                    <form>
+                        <div class="form-group phone">
+                            <input type="text" class="form-control" max="10" id="ccnum" placeholder="Enter Mobile No">
+                        </div>
+                        <div class="submit-sec">
+                            <button type="submit" class="btn btn-primary btn-next">Get OTP</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="popup-cont fgoetotpconf" style="display: none;">
+                <div class="pop-tlt-sec">
+                    <span class="tlt">Forgot PIN</span>
+                    <span class="bck">Back</span>
+                </div>
+                <div class="pop-cont-sec">
+                    <div class="pop-cont-sec">
+                        <span class="otpsent">OTP Send to 98******81</span>
+                        <div class="ent-otp-sec">
+                            <p>Enter OTP</p>
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="">
+                                    <input type="text" class="form-control" placeholder="">
+                                    <input type="text" class="form-control" placeholder="">
+                                    <input type="text" class="form-control" placeholder="">
+                                    <input type="text" class="form-control" placeholder="">
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                                <div class="submit-sec">
+                                    <button type="submit" class="btn btn-primary btn-next">Continue</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-cont fgoetreset" style="display: none;">
+                <div class="pop-tlt-sec">
+                    <span class="tlt">Forgot PIN</span>
+                    <span class="bck">Back</span>
+                </div>
+                <div class="pop-cont-sec">
+                    <form>
+                        <div class="form-group pin">
+                            <input type="text" class="form-control" max="10" id="ccnum" placeholder="Enter New PIN">
+                        </div>
+                        <div class="form-group pin">
+                            <input type="text" class="form-control" max="10" id="ccnum" placeholder="Confirm New PIN">
+                        </div>
+                        <div class="submit-sec">
+                            <button type="submit" class="btn btn-primary btn-next">Reset PIN</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- less js -->
+        <script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
+        <script src="js/chartist.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+
+</html>

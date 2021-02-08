@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <title>Selfcare Portal | Dashboard</title>
+        <!-- for less/css -->
+        <link rel="stylesheet/less" type="text/css" href="less/main.less" />
+        <!-- for chart -->
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" />
+        <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+        <script src="js/chartist-plugin-fill-donut.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container-fluid no-pd">
+            <div class="sidebar-nav">
+                <div class="logo">
+                    <img src="images/logo.png" />
+                </div>
+                <ul class="navlink">
+                    <li class="crd"><a href="index.html">My Cards</a></li>
+                    <li class="trans"><a href="transactions.html">Transactions</a></li>
+                    <li class="ac-stgs active"><a href="account-settings.html">Account Settings</a></li>
+                </ul>
+            </div>
+            <div class="content-sec">
+                <div class="content-cen">
+                    <div class="container-cen-inn account-pg">
+                        <div class="trans-tlt">
+                            <span class="tlt">My Account</span>
+                        </div>
+                        <div class="profilebx">
+                            <span class="profile-pic"><img src="images/profile.png" /></span>
+                            <span class="profile-dlt">
+                                <p>Aagaya Magalya</p>
+                                <p>Customer ID: 456789876456</p>
+                            </span>
+                        </div>
+                        <div class="profile-dlt-container">
+                            <div class="detailedinfo">
+                                <p class="tlt">profile info</p>
+                                <div class="row">
+                                    <div class="col-xl-4 col-xs-12 col-sm-4 prodlt">
+                                        <label>Name</label>
+                                        <p>Aagaya Magalya</p>
+                                    </div>
+                                    <div class="col-xl-4 col-xs-12 col-sm-4 prodlt">
+                                        <label>Date of birth</label>
+                                        <p>May 8, 1993</p>
+                                    </div>
+                                    <div class="col-xl-4 col-xs-12 col-sm-4 prodlt">
+                                        <label>Address</label>
+                                        <p>Door No.12, Street name, Area Name, District Name, State Name - Pincode</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detailedinfo">
+                                <p class="tlt">contact details</p>
+                                <div class="row">
+                                    <div class="col-xl-4 col-xs-12 col-sm-4 prodlt">
+                                        <label>email</label>
+                                        <p>agmya83@mail.com <span class="chng">Change</span></p>
+                                    </div>
+                                    <div class="col-xl-4 col-xs-12 col-sm-4 prodlt">
+                                        <label>Mobile Number</label>
+                                        <p>+91 91921 91921</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detailedinfo">
+                                <p class="tlt">kyc details</p>
+                                <div class="row">
+                                    <div class="col-xl-4 col-xs-12 col-sm-4 prodlt">
+                                        <label>Permanent Account Number (PAN)</label>
+                                        <p>TOTP7171W</p>
+                                    </div>
+                                    <div class="col-xl-4 col-xs-12 col-sm-4 prodlt">
+                                        <label>Aadhaar</label>
+                                        <p>3123 *** *** 12</p>
+                                    </div>
+                                    <div class="col-xl-4 col-xs-12 col-sm-4 prodlt">
+                                        <label>KYC Verification Status</label>
+                                        <p>Verified. Full KYC</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detailedinfo">
+                                <p class="tlt">account password</p>
+                                <div class="row">
+                                    <div class="col-xl-4 col-xs-12 col-sm-4 prodlt">
+                                        <label>Password</label>
+                                        <p class="passwrd">................ <span class="passeye"></span> <span
+                                                class="chng">Change</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-profile">
+                    <div class="profile-sec">
+                        <div class="notifi"></div>
+                        <div class="userprofile">
+                            <div class="user-sec">
+                                <span class="userimg"><img src="images/user.jpg" class="img-fluid" alt="" /></span>
+                                <span class="userdltsec">Aagaya Magalya</span>
+                                <span class="lout"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cont-cen-inn">
+                        <div class="tlt-sec">
+                            <p>My Card History</p>
+                        </div>
+                        <div class="cards-dlt-sec">
+                            <div class="acc-active-card">
+                                <p>Card Number: 4648 7484 8339 0202</p>
+                                <div class="status-sec">
+                                    <div>Status: <span class="crdstatus">Active</span></div>
+                                    <div>Type: <span>Physical</span></div>
+                                </div>
+                            </div>
+                            <div class="expired-card-sec">
+                                <div class="exp-card">
+                                    <p class="expdate">Dec 30, 2020 12:30 PM</p>
+                                    <div class="acc-active-card exp-cardcontainer">
+                                        <p>Card Number: 4648 7484 8339 0202</p>
+                                        <div class="status-sec">
+                                            <div>Status: Expired</div>
+                                            <div>Type: <span>Physical</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exp-card">
+                                    <p class="expdate">Dec 30, 2020 12:30 PM</p>
+                                    <div class="acc-active-card exp-cardcontainer">
+                                        <p>Card Number: 4648 7484 8339 0202</p>
+                                        <div class="status-sec">
+                                            <div>Status: Expired</div>
+                                            <div>Type: <span>Physical</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="exp-card">
+                                    <p class="expdate">Dec 30, 2020 12:30 PM</p>
+                                    <div class="acc-active-card exp-cardcontainer">
+                                        <p>Card Number: 4648 7484 8339 0202</p>
+                                        <div class="status-sec">
+                                            <div>Status: Damaged</div>
+                                            <div>Type: <span>Physical</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- popups -->
+        <div class="popup editprefrence" style="display: none;">
+            <div class="popup-cont">
+                <div class="pop-tlt-sec">
+                    <p class="pop-tlt">Edit Preferences</p>
+                    <span class="btn-sec">
+                        <button class="btn btn-cncl">Cancel</button>
+                        <button class="btn btn-submit">Continue</button>
+                    </span>
+                </div>
+                <div class="pop-cont-sec">
+                    <div class="pop-cont-tlt">Change Summary</div>
+                    <div class="pop-delt-bl">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Preference</th>
+                                    <th scope="col">Limit changes</th>
+                                    <th scope="col">Alert changes</th>
+                                    <th scope="col">Preference Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="tbl-crd">
+                                            <span class="crd-type crd-swipe">
+                                                <img src="images/cards/card-swipe.svg" />
+                                            </span>
+                                            <p>Card Swipe</p>
+                                        </span>
+                                    </td>
+                                    <td>Changed from 10,000 to 12,000</td>
+                                    <td>No change in alert</td>
+                                    <td>No change</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="tbl-crd">
+                                            <span class="crd-type cash">
+                                                <img src="images/cards/cash.svg" />
+                                            </span>
+                                            <p>Cash Withdrawal</p>
+                                        </span>
+                                    </td>
+                                    <td>Changed from 10,000 to 12,000</td>
+                                    <td>Alert set for 80%</td>
+                                    <td>No change</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="tbl-crd">
+                                            <span class="crd-type online">
+                                                <img src="images/cards/online.svg" />
+                                            </span>
+                                            <p>Card Swipe</p>
+                                        </span>
+                                    </td>
+                                    <td>No change in limit</td>
+                                    <td>No change in alert</td>
+                                    <td>No change</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="tbl-crd">
+                                            <span class="crd-type contless">
+                                                <img src="images/cards/online.svg" />
+                                            </span>
+                                            <p>Card Swipe</p>
+                                        </span>
+                                    </td>
+                                    <td>No change in limit</td>
+                                    <td>No change in alert</td>
+                                    <td>No change</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup forgototp" style="display: none;">
+            <div class="popup-cont fgoetmobile" style="display: none;">
+                <div class="pop-tlt-sec">
+                    <span class="tlt">Forgot PIN</span>
+                    <span class="bck">Back</span>
+                </div>
+                <div class="pop-cont-sec">
+                    <form>
+                        <div class="form-group phone">
+                            <input type="text" class="form-control" max="10" id="ccnum" placeholder="Enter Mobile No">
+                        </div>
+                        <div class="submit-sec">
+                            <button type="submit" class="btn btn-primary btn-next">Get OTP</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="popup-cont fgoetotpconf" style="display: none;">
+                <div class="pop-tlt-sec">
+                    <span class="tlt">Forgot PIN</span>
+                    <span class="bck">Back</span>
+                </div>
+                <div class="pop-cont-sec">
+                    <div class="pop-cont-sec">
+                        <span class="otpsent">OTP Send to 98******81</span>
+                        <div class="ent-otp-sec">
+                            <p>Enter OTP</p>
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="">
+                                    <input type="text" class="form-control" placeholder="">
+                                    <input type="text" class="form-control" placeholder="">
+                                    <input type="text" class="form-control" placeholder="">
+                                    <input type="text" class="form-control" placeholder="">
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                                <div class="submit-sec">
+                                    <button type="submit" class="btn btn-primary btn-next">Continue</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-cont fgoetreset" style="display: none;">
+                <div class="pop-tlt-sec">
+                    <span class="tlt">Forgot PIN</span>
+                    <span class="bck">Back</span>
+                </div>
+                <div class="pop-cont-sec">
+                    <form>
+                        <div class="form-group pin">
+                            <input type="text" class="form-control" max="10" id="ccnum" placeholder="Enter New PIN">
+                        </div>
+                        <div class="form-group pin">
+                            <input type="text" class="form-control" max="10" id="ccnum" placeholder="Confirm New PIN">
+                        </div>
+                        <div class="submit-sec">
+                            <button type="submit" class="btn btn-primary btn-next">Reset PIN</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- less js -->
+        <script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
+        <script src="js/main.js"></script>
+    </body>
+
+</html>
