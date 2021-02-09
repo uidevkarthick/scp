@@ -1,1 +1,407 @@
 @import "theme.less";
+
+.login-bg {
+  float: left;
+  width: 100%;
+  height: 100vh;
+  background: url("../images/login-bg.jpg") no-repeat center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: relative;
+
+  .lynklogn {
+    position: absolute;
+    width: 100%;
+    bottom: 4%;
+    padding: 0 20%;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        float: left;
+
+        a {
+          font-family: @font-ilisar_light;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 160%;
+          text-decoration-line: underline !important;
+          text-transform: capitalize;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+.login-sec {
+  float: left;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .loginbx {
+    float: left;
+    width: 380px;
+    padding: 35px;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+
+    h2 {
+      font-family: @font-ilisar;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 16px;
+      color: @txt-color;
+      margin-bottom: 37px;
+    }
+
+    .tltbx {
+      float: left;
+      width: 100%;
+
+      .pay-tlt {
+        float: left;
+        width: 100%;
+        font-family: @font-ibm;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 22px;
+        text-transform: uppercase;
+        color: #bab9c1;
+        margin-bottom: 0;
+      }
+      .paybanktlt {
+        float: left;
+        width: 100%;
+        margin-bottom: 0;
+        font-family: @font-ilisar_light;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 36px;
+        color: #262628;
+      }
+    }
+  }
+
+  .lognbx {
+    float: left;
+    width: 100%;
+
+    p,
+    .lgnwdbck {
+      float: left;
+      width: 100%;
+      margin-top: 24px;
+      margin-bottom: 20px;
+      font-family: @font-ilisar_light;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      color: @txt-color;
+    }
+
+    input {
+      font-family: @font-ilisar;
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: normal;
+      color: @txt-color;
+      border: none;
+    }
+
+    .log-selection.logpass {
+      margin-top: 20px;
+    }
+    .log-selection {
+      float: left;
+      width: 100%;
+      border-bottom: 1px solid @border-color;
+      margin-bottom: 5px;
+      position: relative;
+
+      .bootstrap-select {
+        float: left;
+        width: 30% !important;
+        background: none;
+        font-family: @font-ilisar !important;
+
+        .filter-option-inner-inner {
+          font-size: 12px !important;
+          color: @lynk-color;
+        }
+
+        button {
+          background: none;
+          border: none;
+          outline: none !important;
+          padding: 0;
+
+          &::after {
+            background: url("../images/arr-blue.svg") no-repeat center;
+            border: none;
+            width: 12px;
+            height: 8px;
+            position: relative;
+            top: 2px;
+          }
+        }
+
+        .dropdown-menu {
+          padding: 0;
+        }
+
+        .dropdown-item {
+          span {
+            font-size: 11px !important;
+          }
+        }
+      }
+
+      input {
+        float: left;
+        width: 70%;
+      }
+
+      .lgnlbl {
+        float: left;
+        width: 30%;
+        font-family: @font-ilisar;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 160%;
+        text-transform: capitalize;
+        color: #7f8ea2;
+        margin-bottom: 0;
+        position: relative;
+        top: 6px;
+      }
+
+      .chng-mob {
+        color: @lynk-color;
+        float: right;
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 12px;
+        font-family: @font-ilisar;
+        text-decoration-line: underline !important;
+        text-transform: capitalize;
+      }
+
+      .otp-login {
+        float: left;
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: -10px;
+
+        input {
+          float: left;
+          width: 22px;
+          border-bottom: 1px solid @card-tlt;
+          border-radius: 0;
+          padding: 0;
+          text-align: center;
+        }
+      }
+    }
+
+    .btn-next {
+      padding: 15px 24px;
+      height: 48px;
+    }
+  }
+
+  .fget {
+    float: right;
+    width: 100%;
+    text-align: right;
+    color: @lynk-color;
+    font-size: 10px;
+    font-family: @font-ilisar;
+    margin-bottom: 20px;
+    text-decoration: underline !important;
+  }
+
+  .lgnlynks {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .lgnslynks {
+      float: left;
+      width: 380px;
+      padding: 35px;
+
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+
+        li {
+          float: left;
+          a {
+            font-family: @font-ilisar_light;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 160%;
+            text-decoration-line: underline !important;
+            text-transform: capitalize;
+            color: #262628;
+          }
+        }
+      }
+    }
+  }
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: #ffffff;
+  opacity: 1;
+}
+
+.fgetbx {
+  padding: 0 !important;
+
+  h2.lgnwdbck {
+    padding: 20px 35px;
+    background: @tab-bg;
+    margin-bottom: 20px;
+  }
+
+  .lognbx {
+    padding: 0 35px 35px 35px;
+  }
+
+  .lognfrm {
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.lgnwdbck span {
+  float: right;
+  color: @lynk-color;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 140%;
+  font-family: @font-ilisar;
+  cursor: pointer;
+
+  &:before {
+    content: "";
+    background: url("../images/arr-blue.svg") no-repeat center;
+    width: 14px;
+    height: 10px;
+    display: inline-block;
+    transform: rotate(90deg);
+    position: relative;
+    top: 1px;
+  }
+}
+
+.fgetotp-sent {
+  font-family: @font-ilisar_light;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px !important;
+  line-height: 16px;
+  margin: 15px 0 30px 0 !important;
+}
+
+.fgetotp-tlt {
+  float: left;
+  width: 100%;
+  margin-bottom: 0;
+  font-family: @font-ilisar !important;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: @txt-color;
+  margin: 0 0 !important;
+}
+
+.otp-login {
+  float: left;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: -10px;
+  margin-bottom: 30px;
+
+  input {
+    float: left;
+    width: 22px;
+    border-bottom: 1px solid @card-tlt !important;
+    border-radius: 0;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+.pin {
+  float: left;
+  width: 100%;
+  padding-left: 24px;
+  position: relative;
+  border-bottom: 1px solid @border-color;
+  margin-bottom: 26px;
+  font-family: @font-ilisar;
+
+  input {
+    color: #131313;
+    border: none;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &::before {
+    content: "";
+    background: url("../images/lock.svg") no-repeat center;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    position: absolute;
+    bottom: 7px;
+    left: 6px;
+  }
+}
+
+.chng-success-msg {
+  float: left;
+  width: 100%;
+  font-family: @font-ilisar;
+  font-size: 12px !important;
+  line-height: 160%;
+  color: @txt-color;
+  margin: 0 0 30px 0 !important;
+}
