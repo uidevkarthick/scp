@@ -28,6 +28,16 @@
                     <li class="trans"><a href="transactions.html">Transactions</a></li>
                     <li class="ac-stgs"><a href="account-settings.html">Account Settings</a></li>
                 </ul>
+                <div class="sidenav-foo">
+                    <div class="dtfoo">
+                        <span>Last Login 12:30pm 31/12/2020</span>
+                    </div>
+                    <div class="fooimg">
+                        <img src="images/sidenavimg.svg" class="img-fluid" alt="" />
+                        <span>Use our Platinum<br />features now!</span>
+                    </div>
+                    <span class="getpremium">Get Platinum Card</span>
+                </div>
             </div>
             <div class="content-sec">
                 <div class="content-cen">
@@ -40,7 +50,8 @@
                             <div class="tlt-sec">
                                 <p>Spend Summary - Dec 2020</p>
                                 <span>
-                                    <a href="" data-toggle="tooltip" data-placement="top"
+                                    <a href="javascript:void(0)" data-toggle="tooltip" data-placement="top"
+                                        class="editsummeryshow"
                                         title="You can add and edit monthly limits for each preferences">Edit
                                         Preferences</a>
                                 </span>
@@ -880,7 +891,13 @@
                                 <div class="crd-tp">
                                     <p class="crdtxt">Total Available Balance</p>
                                     <span class="crdamt">₹ 18,678.87 <span>of ₹ 50,000.00</span></span>
-                                    <div class="showcvv">Show CVV & Date</div>
+                                    <div class="showcvv">
+                                        <span class="cvvs">Show CVV & Date</span>
+                                        <div class="showedcvv">
+                                            <p>cvv<span>342</span></p>
+                                            <p>Expiry<span>09/24</span></p>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="crd-bt">
                                     <div class="crdno">5894 6985 7843 5624 <span class="crdlogo"><img
@@ -948,8 +965,159 @@
             </div>
         </div>
         <!-- popups -->
-        <div class="popup editprefrence" style="display: none;">
-            <div class="popup-cont">
+        <div class="popup editprefrence">
+            <div class="popup-cont editpref">
+                <div class="pop-tlt-sec">
+                    <p class="pop-tlt">Edit Preferences</p>
+                    <span class="btn-sec">
+                        <button class="btn btn-cncl">Cancel</button>
+                        <button class="btn btn-submit">Continue</button>
+                    </span>
+                </div>
+                <div class="pop-cont-sec">
+                    <div class="prefcards">
+                        <div class="crdspref prefcardswipe"></div>
+                        <div class="prefcard">
+                            <div class="amt-val-sec">
+                                <span class="preftlt">Card Swipe</span>
+                                <div class="amt-enbl">
+                                    <span class="tot-amt"><span class="currency">₹</span> 10,000.00</span>
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="swipe-swch">
+                                        <label class="custom-control-label" for="swipe-swch">Enabled</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="amt-edit-sec">
+                                <div class="editlmt">
+                                    <p class="elimt">Edit limit</p>
+                                    <span class="entlimit">
+                                        <input type="text" placeholder="Enter limit" class="editmat" />
+                                    </span>
+                                    <div class="chklmt">
+                                        <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox"
+                                            value="value1">
+                                        <label for="styled-checkbox-1">Alert when exceeds <span
+                                                id="rangeresult">90</span> %</label>
+                                    </div>
+                                </div>
+                                <div class="rangeslider">
+                                    <div class="rSlider">
+                                        <span class="slide"></span>
+                                        <input id="range" type="range" min="0" max="100">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prefcards">
+                        <div class="crdspref prefonline"></div>
+                        <div class="prefcard">
+                            <div class="amt-val-sec">
+                                <span class="preftlt">Online</span>
+                                <div class="amt-enbl">
+                                    <span class="tot-amt"><span class="currency">₹</span> 10,000.00</span>
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="online-swch">
+                                        <label class="custom-control-label" for="online-swch">Enabled</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="amt-edit-sec">
+                                <div class="editlmt">
+                                    <p class="elimt">Edit limit</p>
+                                    <span class="entlimit">
+                                        <input type="text" placeholder="Enter limit" class="editmat" />
+                                    </span>
+                                    <div class="chklmt">
+                                        <input class="styled-checkbox" id="styled-checkbox-2" type="checkbox"
+                                            value="value1">
+                                        <label for="styled-checkbox-2">Alert when exceeds <span
+                                                id="rangeresult">90</span> %</label>
+                                    </div>
+                                </div>
+                                <div class="rangeslider">
+                                    <div class="rSlider">
+                                        <span class="slide"></span>
+                                        <input id="range" type="range" min="0" max="100">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prefcards">
+                        <div class="crdspref prefcash"></div>
+                        <div class="prefcard">
+                            <div class="amt-val-sec">
+                                <span class="preftlt">Card Withdrawal</span>
+                                <div class="amt-enbl">
+                                    <span class="tot-amt"><span class="currency">₹</span> 10,000.00</span>
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="online-swch">
+                                        <label class="custom-control-label" for="online-swch">Enabled</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="amt-edit-sec">
+                                <div class="editlmt">
+                                    <p class="elimt">Edit limit</p>
+                                    <span class="entlimit">
+                                        <input type="text" placeholder="Enter limit" class="editmat" />
+                                    </span>
+                                    <div class="chklmt">
+                                        <input class="styled-checkbox" id="styled-checkbox-2" type="checkbox"
+                                            value="value1">
+                                        <label for="styled-checkbox-2">Alert when exceeds <span
+                                                id="rangeresult">90</span> %</label>
+                                    </div>
+                                </div>
+                                <div class="rangeslider">
+                                    <div class="rSlider">
+                                        <span class="slide"></span>
+                                        <input id="range" type="range" min="0" max="100">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prefcards">
+                        <div class="crdspref prefcless"></div>
+                        <div class="prefcard">
+                            <div class="amt-val-sec">
+                                <span class="preftlt">Contactless</span>
+                                <div class="amt-enbl">
+                                    <span class="tot-amt"><span class="currency">₹</span> 10,000.00</span>
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="online-swch">
+                                        <label class="custom-control-label" for="online-swch">Enabled</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="amt-edit-sec">
+                                <div class="editlmt">
+                                    <p class="elimt">Edit limit</p>
+                                    <span class="entlimit">
+                                        <input type="text" placeholder="Enter limit" class="editmat" />
+                                    </span>
+                                    <div class="chklmt">
+                                        <input class="styled-checkbox" id="styled-checkbox-2" type="checkbox"
+                                            value="value1">
+                                        <label for="styled-checkbox-2">Alert when exceeds <span
+                                                id="rangeresult">90</span> %</label>
+                                    </div>
+                                </div>
+                                <div class="rangeslider">
+                                    <div class="rSlider">
+                                        <span class="slide"></span>
+                                        <input id="range" type="range" min="0" max="100">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-cont editsummery" style="display: none;">
                 <div class="pop-tlt-sec">
                     <p class="pop-tlt">Edit Preferences</p>
                     <span class="btn-sec">
@@ -1032,10 +1200,10 @@
             <div class="popup-cont fgoetmobile" style="display: none;">
                 <div class="pop-tlt-sec">
                     <span class="tlt">Forgot PIN</span>
-                    <span class="bck">Back</span>
+                    <span class="bck cls">Back</span>
                 </div>
                 <div class="pop-cont-sec">
-                    <form>
+                    <form action="javascript:void(0)">
                         <div class="form-group phone">
                             <input type="text" class="form-control" max="10" id="ccnum" placeholder="Enter Mobile No">
                         </div>
@@ -1055,7 +1223,7 @@
                         <span class="otpsent">OTP Send to 98******81</span>
                         <div class="ent-otp-sec">
                             <p>Enter OTP</p>
-                            <form>
+                            <form action="javascript:void(0)">
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="">
                                     <input type="text" class="form-control" placeholder="">
@@ -1078,7 +1246,7 @@
                     <span class="bck">Back</span>
                 </div>
                 <div class="pop-cont-sec">
-                    <form>
+                    <form action="javascript:void(0)">
                         <div class="form-group pin">
                             <input type="text" class="form-control" max="10" id="ccnum" placeholder="Enter New PIN">
                         </div>

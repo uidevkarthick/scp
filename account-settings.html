@@ -101,7 +101,7 @@
                                     <div class="col-xl-4 col-xs-12 col-sm-4 prodlt">
                                         <label>Password</label>
                                         <p class="passwrd">................ <span class="passeye"></span> <span
-                                                class="chng">Change</span></p>
+                                                class="chng changepassword">Change</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -169,147 +169,39 @@
             </div>
         </div>
         <!-- popups -->
-        <div class="popup editprefrence" style="display: none;">
-            <div class="popup-cont">
+        <div class="popup chngpassword" style="display: none;">
+            <div class="popup-cont chngpasssec">
                 <div class="pop-tlt-sec">
-                    <p class="pop-tlt">Edit Preferences</p>
-                    <span class="btn-sec">
-                        <button class="btn btn-cncl">Cancel</button>
-                        <button class="btn btn-submit">Continue</button>
-                    </span>
+                    <span class="tlt">Change Account Password</span>
+                    <span class="cncl">Cancel</span>
                 </div>
                 <div class="pop-cont-sec">
-                    <div class="pop-cont-tlt">Change Summary</div>
-                    <div class="pop-delt-bl">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Preference</th>
-                                    <th scope="col">Limit changes</th>
-                                    <th scope="col">Alert changes</th>
-                                    <th scope="col">Preference Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <span class="tbl-crd">
-                                            <span class="crd-type crd-swipe">
-                                                <img src="images/cards/card-swipe.svg" />
-                                            </span>
-                                            <p>Card Swipe</p>
-                                        </span>
-                                    </td>
-                                    <td>Changed from 10,000 to 12,000</td>
-                                    <td>No change in alert</td>
-                                    <td>No change</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="tbl-crd">
-                                            <span class="crd-type cash">
-                                                <img src="images/cards/cash.svg" />
-                                            </span>
-                                            <p>Cash Withdrawal</p>
-                                        </span>
-                                    </td>
-                                    <td>Changed from 10,000 to 12,000</td>
-                                    <td>Alert set for 80%</td>
-                                    <td>No change</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="tbl-crd">
-                                            <span class="crd-type online">
-                                                <img src="images/cards/online.svg" />
-                                            </span>
-                                            <p>Card Swipe</p>
-                                        </span>
-                                    </td>
-                                    <td>No change in limit</td>
-                                    <td>No change in alert</td>
-                                    <td>No change</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="tbl-crd">
-                                            <span class="crd-type contless">
-                                                <img src="images/cards/online.svg" />
-                                            </span>
-                                            <p>Card Swipe</p>
-                                        </span>
-                                    </td>
-                                    <td>No change in limit</td>
-                                    <td>No change in alert</td>
-                                    <td>No change</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="popup forgototp" style="display: none;">
-            <div class="popup-cont fgoetmobile" style="display: none;">
-                <div class="pop-tlt-sec">
-                    <span class="tlt">Forgot PIN</span>
-                    <span class="bck">Back</span>
-                </div>
-                <div class="pop-cont-sec">
-                    <form>
-                        <div class="form-group phone">
-                            <input type="text" class="form-control" max="10" id="ccnum" placeholder="Enter Mobile No">
+                    <form action="javascript:void(0)">
+                        <div class="form-group pin">
+                            <input type="text" class="form-control" max="10" id="ccnum"
+                                placeholder="Enter Old Password">
+                        </div>
+                        <div class="form-group pin">
+                            <input type="text" class="form-control" max="10" id="ccnum"
+                                placeholder="Enter New Password">
+                        </div>
+                        <div class="form-group pin">
+                            <input type="text" class="form-control" max="10" id="ccnum"
+                                placeholder="Confirm New Password">
                         </div>
                         <div class="submit-sec">
-                            <button type="submit" class="btn btn-primary btn-next">Get OTP</button>
+                            <button type="submit" class="btn btn-primary btn-next">Change Password</button>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="popup-cont fgoetotpconf" style="display: none;">
+            <div class="popup-cont popsucess" style="display: none;">
                 <div class="pop-tlt-sec">
-                    <span class="tlt">Forgot PIN</span>
-                    <span class="bck">Back</span>
+                    <span class="tlt">Change Account Password</span>
                 </div>
                 <div class="pop-cont-sec">
-                    <div class="pop-cont-sec">
-                        <span class="otpsent">OTP Send to 98******81</span>
-                        <div class="ent-otp-sec">
-                            <p>Enter OTP</p>
-                            <form>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="">
-                                    <input type="text" class="form-control" placeholder="">
-                                    <input type="text" class="form-control" placeholder="">
-                                    <input type="text" class="form-control" placeholder="">
-                                    <input type="text" class="form-control" placeholder="">
-                                    <input type="text" class="form-control" placeholder="">
-                                </div>
-                                <div class="submit-sec">
-                                    <button type="submit" class="btn btn-primary btn-next">Continue</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="popup-cont fgoetreset" style="display: none;">
-                <div class="pop-tlt-sec">
-                    <span class="tlt">Forgot PIN</span>
-                    <span class="bck">Back</span>
-                </div>
-                <div class="pop-cont-sec">
-                    <form>
-                        <div class="form-group pin">
-                            <input type="text" class="form-control" max="10" id="ccnum" placeholder="Enter New PIN">
-                        </div>
-                        <div class="form-group pin">
-                            <input type="text" class="form-control" max="10" id="ccnum" placeholder="Confirm New PIN">
-                        </div>
-                        <div class="submit-sec">
-                            <button type="submit" class="btn btn-primary btn-next">Reset PIN</button>
-                        </div>
-                    </form>
+                    <p class="sucess-msg">Your Account Password has been Sucessfully Changed</p>
+                    <button type="submit" class="btn btn-primary btn-next">Go To Home</button>
                 </div>
             </div>
         </div>

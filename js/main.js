@@ -81,4 +81,97 @@ $(document).ready(function () {
 
     $('[data-toggle="tooltip"]').tooltip();
 
+
+
+    // forget pin poup
+
+    $(".cls, .popsucess .btn-next").click(function () {
+        $(".popup").hide();
+    })
+
+    $(".fget").click(function () {
+        $(".forgototp").show();
+        $(".fgoetmobile").show();
+    });
+
+    $(".fgoetmobile .btn-next").click(function () {
+        $(".fgoetmobile").hide();
+        $(".fgoetotpconf").show();
+    });
+
+    $(".fgoetotpconf .btn-next").click(function () {
+        $(".fgoetotpconf").hide();
+        $(".fgoetmobile").hide();
+        $(".fgoetreset").show();
+    });
+
+    $(".fgoetreset .btn-next").click(function () {
+        $(".forgototp").hide();
+    });
+
+    // show cvv
+    $(".cvvs").click(function () {
+
+
+        if ($(this).hasClass("hidecvvs")) {
+            $(this).removeClass("hidecvvs");
+            $(this).text("Show CVV & Date");
+            $(".showedcvv").css("display", "none");
+        } else {
+            $(this).addClass("hidecvvs");
+            $(".showedcvv").css("display", "flex");
+            $(this).text("Hide CVV & Date");
+        }
+    });
+
+    // range slider
+
+    $(window).on("load", function () {
+        var range = $("#range").attr("value");
+        $("#rangeresult").html(range);
+        $(".slide").css("width", "50%");
+        $(document).on('input change', '#range', function () {
+            $('#rangeresult').html($(this).val());
+            var slideWidth = $(this).val() * 100 / 100;
+
+            $(".slide").css("width", slideWidth + "%");
+        });
+    });
+
+    // edit limt
+
+    $(".elimt").click(function () {
+        $(this).parent().find(".entlimit").show();
+    })
+
+    // edit prefrance
+    $(".editsummeryshow").click(function () {
+        $(".editprefrence").css("display", "flex");
+    })
+    $(".editpref .btn-submit").click(function () {
+        $(".editpref").hide();
+        $(".editsummery").show();
+    });
+    $(".editsummery .btn-submit").click(function () {
+        $(".editprefrence").hide();
+    });
+
+    // change password
+
+    $(".changepassword").click(function () {
+        $(".chngpassword").css("display", "flex");
+        $(".chngpasssec").show();
+    });
+
+    $(".chngpasssec .btn-next").click(function () {
+        $(".chngpasssec").hide();
+        $(".popsucess").show();
+    });
+
+    // logout
+
+    $(".lout").click(function () {
+        window.location.href = "login.html";
+    })
+
 });

@@ -158,6 +158,82 @@ input {
       }
     }
   }
+
+  .sidenav-foo {
+    float: left;
+    width: 100%;
+    position: absolute;
+    bottom: 3%;
+    left: 0;
+
+    .dtfoo {
+      float: left;
+      width: 100%;
+      padding: 15px;
+      border-top: 1px solid @border-color;
+      border-bottom: 1px solid @border-color;
+
+      span {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 21px;
+        font-family: @font-ilisar_light;
+        color: @txt-color;
+        text-align: center;
+        display: block;
+      }
+    }
+
+    .fooimg {
+      float: left;
+      width: 100%;
+      margin-top: 60px;
+      text-align: center;
+
+      img {
+        width: 80%;
+      }
+
+      span {
+        float: left;
+        width: 100%;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 21px;
+        font-family: @font-sen;
+        text-align: center;
+        margin-top: 26px;
+      }
+    }
+
+    .getpremium {
+      background: linear-gradient(0deg, #4d7ff7, #4d7ff7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      float: left;
+      width: 80%;
+      color: @white-color;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 21px;
+      font-family: @font-sen;
+      padding: 12px 24px;
+      border-radius: 4px;
+      margin-left: 10%;
+      text-align: center;
+      margin-top: 20px;
+
+      &::after {
+        content: "";
+        background: url("../images/premi.svg") no-repeat center;
+        width: 14px;
+        height: 14px;
+        display: inline-block;
+        position: relative;
+        left: 5px;
+        top: 4px;
+      }
+    }
+  }
 }
 
 .content-sec {
@@ -1061,14 +1137,16 @@ input {
       float: left;
       width: 100%;
       height: 200px;
-      background: #ccc;
+      background: url("../images/cardbg.png") no-repeat center;
       border-radius: 20px;
       font-family: @font-ilisar;
-      padding: 24px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       margin-bottom: 20px;
+      position: relative;
+      background-size: cover;
+      padding: 20px 20px;
 
       .crd-tp,
       .crd-bt {
@@ -1082,6 +1160,7 @@ input {
         font-size: 11px;
         line-height: 18px;
         margin-bottom: 5px;
+        color: @white-color;
       }
       .crdamt {
         float: left;
@@ -1089,11 +1168,13 @@ input {
         font-weight: normal;
         font-size: 18px;
         line-height: 28px;
+        color: @white-color;
 
         span {
           font-weight: normal;
           font-size: 11px;
           line-height: 18px;
+          color: @white-color;
         }
       }
       .showcvv {
@@ -1105,6 +1186,30 @@ input {
         margin-top: 10px;
         text-decoration: underline;
         cursor: pointer;
+        color: @white-color;
+        display: flex;
+        justify-content: space-between;
+
+        .cvvs {
+          float: left;
+        }
+        .showedcvv {
+          display: flex;
+          float: left;
+          display: none;
+          p {
+            margin-right: 20px;
+            font-family: @font-ilisar;
+            &:last-child {
+              margin-right: 0;
+            }
+
+            span {
+              margin-left: 5px;
+              font-weight: bold;
+            }
+          }
+        }
       }
       .crdno {
         float: left;
@@ -1116,6 +1221,7 @@ input {
         font-family: @font-ibm;
         letter-spacing: 1px;
         opacity: 0.9;
+        color: @white-color;
       }
       .crd-mode {
         font-weight: normal;
@@ -1125,6 +1231,7 @@ input {
         width: 100%;
         text-transform: uppercase;
         opacity: 0.67;
+        color: @white-color;
       }
     }
 
@@ -1321,10 +1428,6 @@ input {
   justify-content: center;
 }
 
-.editprefrence {
-  display: none;
-}
-
 .popup-cont {
   float: left;
   width: 80%;
@@ -1490,10 +1593,223 @@ input {
   }
 }
 
-.forgototp {
+.editprefrence {
+  float: left;
+  display: none;
+
+  .pop-tlt-sec {
+    padding: 20px 25px;
+  }
+  .pop-cont-sec {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .prefcards {
+    background: @tab-bg;
+    border-radius: 10px;
+    float: left;
+    width: 49%;
+    padding: 15px;
+    border: 1px solid @tab-bg;
+    margin-bottom: 20px;
+
+    .prefcrd {
+      float: left;
+    }
+
+    .crdspref {
+      float: left;
+      width: 48px;
+      height: 48px;
+      background: #ccc;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 16px;
+    }
+
+    .prefcardswipe {
+      background: @card;
+      &::after {
+        content: "";
+        background: url("../images/cards/card-swipe.svg") no-repeat center;
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+      }
+    }
+
+    .prefonline {
+      background: @online;
+      &::after {
+        content: "";
+        background: url("../images/cards/online.svg") no-repeat center;
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+      }
+    }
+
+    .prefcash {
+      background: @cash;
+      &::after {
+        content: "";
+        background: url("../images/cards/cash.svg") no-repeat center;
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+      }
+    }
+
+    .prefcless {
+      background: @contectless;
+      &::after {
+        content: "";
+        background: url("../images/cards/wifi.svg") no-repeat center;
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+      }
+    }
+
+    .preftlt {
+      float: left;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 15px;
+      font-family: @font-ilisar;
+      color: @txt-color;
+      letter-spacing: -0.2px;
+    }
+
+    .amt-val-sec {
+      float: left;
+      width: 100%;
+      margin: 15px 0 20px 0;
+    }
+
+    .prefcard {
+      float: left;
+      width: calc(100% - 70px);
+    }
+
+    .amt-edit-sec {
+      float: left;
+      width: 100%;
+
+      .editlmt {
+        float: left;
+        width: 100%;
+
+        p {
+          float: left;
+          color: @lynk-color;
+          font-weight: 300;
+          font-size: 12px;
+          line-height: 14px;
+          font-family: @font-ilisar_light;
+          text-decoration: underline !important;
+          cursor: pointer;
+        }
+
+        .entlimit {
+          display: none;
+        }
+
+        span {
+          float: left;
+          width: 100px;
+          margin-left: 15px;
+          position: relative;
+          top: -6px;
+
+          input {
+            background: @tab-bg;
+            border: none;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 12px;
+            outline: none !important;
+            font-family: @font-ilisar;
+          }
+        }
+
+        .chklmt {
+          float: left;
+          width: 100%;
+          margin-top: 10px;
+
+          label {
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 12px;
+            font-family: @font-ilisar;
+            position: relative;
+            left: 5px;
+            top: -1px;
+          }
+        }
+      }
+    }
+
+    .amt-enbl {
+      float: right;
+      display: flex;
+
+      .tot-amt {
+        margin-right: 50px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 15px;
+        color: @txt-color;
+        font-family: @font-ilisar;
+        letter-spacing: -0.2px;
+
+        .currency {
+          font-size: 14px;
+          line-height: 15px;
+          letter-spacing: -0.2px;
+          color: @txt-color;
+          opacity: 0.5;
+        }
+      }
+
+      .custom-switch {
+        label {
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 1.6;
+          color: #7f8ea2;
+          font-family: @font-ilisar;
+          position: relative;
+          top: -3px;
+        }
+      }
+
+      .custom-control-input:checked ~ .custom-control-label::before {
+        color: #fff;
+        border-color: #00990f;
+        background-color: #00990f;
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+.editpref {
+  width: 70%;
+}
+
+.forgototp,
+.chngpassword {
   .fgoetmobile,
   .fgoetotpconf,
-  .fgoetreset {
+  .fgoetreset,
+  .chngpasssec,
+  .popsucess {
     float: left;
     width: 440px;
 
@@ -1540,6 +1856,16 @@ input {
         font-size: 14px;
         line-height: 21px;
       }
+    }
+
+    .cncl {
+      float: right;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 140%;
+      font-family: @font-ilisar;
+      color: @lynk-color;
+      cursor: pointer;
     }
   }
 
@@ -1627,6 +1953,29 @@ input {
     text-align: center;
     &::after {
       background: no-repeat;
+    }
+  }
+
+  .sucess-msg {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 160%;
+    font-family: @font-ilisar;
+    text-transform: capitalize;
+    color: @txt-color;
+    text-align: center;
+    margin: 0 0 30px 0;
+
+    &::before {
+      content: "";
+      background: url("../images/tick.svg") no-repeat center;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      position: relative;
+      top: 3px;
+      margin-right: 10px;
     }
   }
 }
@@ -2179,4 +2528,12 @@ input {
     margin-bottom: 5px;
     padding-left: 10px;
   }
+}
+
+#rangeresult {
+  display: inline-block !important;
+  float: none;
+  width: auto;
+  top: 0;
+  margin: 0;
 }
