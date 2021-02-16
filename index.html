@@ -11,6 +11,8 @@
         <title>Selfcare Portal | Dashboard</title>
         <!-- for less/css -->
         <link rel="stylesheet/less" type="text/css" href="less/main.less" />
+        <!-- animation -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         <!-- for chart -->
         <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" />
         <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
@@ -51,9 +53,7 @@
                                 <p>Spend Summary - Dec 2020</p>
                                 <span>
                                     <a href="javascript:void(0)" data-toggle="tooltip" data-placement="top"
-                                        class="editsummeryshow"
-                                        title="You can add and edit monthly limits for each preferences">Edit
-                                        Preferences</a>
+                                        class="editsummeryshow" title="">Edit Preferences</a>
                                 </span>
                             </div>
                             <div class="inn-tabs">
@@ -194,7 +194,7 @@
                             <div class="tlt-sec">
                                 <p>Recent Transactions</p>
                                 <span class="v-all">
-                                    <a href="">View all</a>
+                                    <a href="transactions.html">View all</a>
                                 </span>
                             </div>
                             <div class="inn-tabs">
@@ -888,21 +888,33 @@
                         </div>
                         <div class="cards-dlt-sec">
                             <div class="urcard">
-                                <div class="crd-tp">
-                                    <p class="crdtxt">Total Available Balance</p>
-                                    <span class="crdamt">₹ 18,678.87 <span>of ₹ 50,000.00</span></span>
-                                    <div class="showcvv">
-                                        <span class="cvvs">Show CVV & Date</span>
-                                        <div class="showedcvv">
-                                            <p>cvv<span>342</span></p>
-                                            <p>Expiry<span>09/24</span></p>
+                                <div class="crd-front">
+                                    <div class="crd-tp">
+                                        <p class="crdtxt">Total Available Balance</p>
+                                        <span class="crdamt">₹ 18,678.87 <span>of ₹ 50,000.00</span></span>
+                                        <div class="showcvv">
+                                            <span class="cvvs shcvv">Show CVV & Date</span>
                                         </div>
                                     </div>
+                                    <div class="crd-bt">
+                                        <div class="crdno">5894 6985 7843 5624 <span class="crdlogo"><img
+                                                    src="images/crdtype.svg" /></span></div>
+                                        <span class="crd-mode">Virtual</span>
+                                    </div>
                                 </div>
-                                <div class="crd-bt">
-                                    <div class="crdno">5894 6985 7843 5624 <span class="crdlogo"><img
-                                                src="images/crdtype.svg" /></span></div>
-                                    <span class="crd-mode">Virtual</span>
+                                <div class="crd-back">
+                                    <div class="cvvshowsec">
+                                        <p>CVV <span class="cvvtxt">481</span> <span class="expdt">05/22/2021</span>
+                                        </p>
+                                        <div class="showcvv">
+                                            <span class="cvvs hidecvv">Hide CVV & Date</span>
+                                        </div>
+                                    </div>
+                                    <div class="crd-bt">
+                                        <div class="crdno">5894 6985 7843 5624 <span class="crdlogo"><img
+                                                    src="images/crdtype.svg" /></span></div>
+                                        <span class="crd-mode">Virtual</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="crdbxs">
@@ -932,28 +944,23 @@
                                     <div class="actilog-drop dropbxs">
                                         <div class="logbx">
                                             <span class="logstatus">PIN reset done successfully. New PIN sent to regd.
-                                                email</span>
-                                            <span class="logtme">Dec 21, 2020 12: 30 PM</span>
+                                                email <span class="logtme">Dec 21, 2020 12: 30 PM</span>
+                                            </span>
                                         </div>
                                         <div class="logbx">
                                             <span class="logstatus">PIN reset done successfully. New PIN sent to regd.
-                                                email</span>
-                                            <span class="logtme">Dec 21, 2020 12: 30 PM</span>
+                                                email <span class="logtme">Dec 21, 2020 12: 30 PM</span>
+                                            </span>
                                         </div>
                                         <div class="logbx">
                                             <span class="logstatus">PIN reset done successfully. New PIN sent to regd.
-                                                email</span>
-                                            <span class="logtme">Dec 21, 2020 12: 30 PM</span>
+                                                email <span class="logtme">Dec 21, 2020 12: 30 PM</span>
+                                            </span>
                                         </div>
                                         <div class="logbx">
                                             <span class="logstatus">PIN reset done successfully. New PIN sent to regd.
-                                                email</span>
-                                            <span class="logtme">Dec 21, 2020 12: 30 PM</span>
-                                        </div>
-                                        <div class="logbx">
-                                            <span class="logstatus">PIN reset done successfully. New PIN sent to regd.
-                                                email</span>
-                                            <span class="logtme">Dec 21, 2020 12: 30 PM</span>
+                                                email <span class="logtme">Dec 21, 2020 12: 30 PM</span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>

@@ -77,11 +77,18 @@ input {
 
 .sidebar-nav {
   float: left;
-  width: 20%;
+  width: 16%;
   background: @sidebar-bg;
   height: 100%;
   padding: 0 15px;
   position: fixed;
+
+  @media only screen and (max-width: 600px) {
+    width: 80%;
+    z-index: 1;
+    padding: 0;
+    display: none;
+  }
 
   .logo {
     float: left;
@@ -89,6 +96,29 @@ input {
     text-align: center;
     margin-bottom: 20px;
     margin-top: 20px;
+  }
+
+  .lout {
+    float: left;
+    width: 100%;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    font-family: @font-ilisar;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    position: absolute;
+    bottom: 5%;
+
+    &::before {
+      content: "";
+      background: url("../images/lout.svg") no-repeat center;
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      margin-right: 8px;
+    }
   }
 
   .navlink {
@@ -106,6 +136,11 @@ input {
       align-items: center;
       margin-bottom: 12px;
 
+      @media only screen and (max-width: 600px) {
+        border-radius: 0;
+        padding: 9px 15px;
+      }
+
       a {
         color: @txt-color;
         font-weight: normal;
@@ -122,6 +157,13 @@ input {
         height: 21px;
         display: inline-block;
         margin-right: 10px;
+      }
+    }
+
+    .formobnav {
+      display: none;
+      @media only screen and (max-width: 600px) {
+        display: block;
       }
     }
 
@@ -157,6 +199,11 @@ input {
         background: url("../images/sidebar/account.svg") no-repeat center;
       }
     }
+    .pronav {
+      &::before {
+        background: url();
+      }
+    }
   }
 
   .sidenav-foo {
@@ -165,6 +212,10 @@ input {
     position: absolute;
     bottom: 3%;
     left: 0;
+
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
 
     .dtfoo {
       float: left;
@@ -238,15 +289,23 @@ input {
 
 .content-sec {
   float: left;
-  width: 80%;
-  margin-left: 20%;
+  width: 84%;
+  margin-left: 16%;
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    margin-left: 0;
+  }
 
   .content-cen {
-    width: 70%;
+    width: 68%;
     float: left;
-
     padding-bottom: 0;
     border-right: 1px solid @border-color;
+
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+    }
   }
 
   .user-tlt-sec {
@@ -280,8 +339,16 @@ input {
   margin-top: 30px;
   height: 86.3vh;
 
+  @media only screen and (max-width: 600px) {
+    height: auto;
+  }
+
   .trans-inn {
     padding-left: 15px;
+
+    @media only screen and (max-width: 600px) {
+      margin-top: 30px;
+    }
 
     .v-all {
       a {
@@ -301,6 +368,10 @@ input {
     height: 100%;
     overflow-y: auto;
     position: relative;
+
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+    }
 
     &:last-child {
       border-right: 0;
@@ -322,6 +393,11 @@ input {
         font-size: 14px;
         line-height: 17px;
         color: @txt-color;
+
+        @media only screen and (max-width: 600px) {
+          font-size: 12.2711px;
+          line-height: 15px;
+        }
       }
 
       span {
@@ -540,7 +616,7 @@ input {
   }
   .logstatus {
     float: left;
-    width: 90%;
+    width: 85%;
     font-weight: normal;
     font-size: 9.99706px;
     line-height: 140%;
@@ -550,7 +626,7 @@ input {
   }
   .logtme {
     float: left;
-    width: 90%;
+    width: 100%;
     letter-spacing: -0.181765px;
     font-weight: normal;
     font-size: 9.99706px;
@@ -722,6 +798,7 @@ input {
       padding: 15px 15px 15px 15px;
       background: @white-color;
       margin-bottom: 15px;
+      overflow: hidden;
 
       &:after {
         content: "";
@@ -883,7 +960,7 @@ input {
 
 .dwnld-btn {
   float: left;
-  width: 114%;
+  width: 130%;
   background: @tab-bg;
   color: @lynk-color;
   font-weight: normal;
@@ -894,7 +971,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  left: -7%;
+  left: -15%;
   position: relative;
 
   &:before {
@@ -909,14 +986,23 @@ input {
 
 .content-profile {
   float: left;
-  width: 30%;
+  width: 32%;
   padding: 15px 15px 0 15px;
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 
   .profile-sec {
     float: left;
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
 
     .notifi {
       float: left;
@@ -1084,6 +1170,10 @@ input {
     justify-content: space-between;
     margin-top: 60px;
 
+    @media only screen and (max-width: 600px) {
+      margin-top: 0;
+    }
+
     p {
       float: left;
       margin-bottom: 0;
@@ -1137,16 +1227,13 @@ input {
       float: left;
       width: 100%;
       height: 200px;
-      background: url("../images/cardbg.png") no-repeat center;
-      border-radius: 20px;
       font-family: @font-ilisar;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
       margin-bottom: 20px;
       position: relative;
       background-size: cover;
-      padding: 20px 20px;
+      position: relative;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
 
       .crd-tp,
       .crd-bt {
@@ -1193,23 +1280,6 @@ input {
         .cvvs {
           float: left;
         }
-        .showedcvv {
-          display: flex;
-          float: left;
-          display: none;
-          p {
-            margin-right: 20px;
-            font-family: @font-ilisar;
-            &:last-child {
-              margin-right: 0;
-            }
-
-            span {
-              margin-left: 5px;
-              font-weight: bold;
-            }
-          }
-        }
       }
       .crdno {
         float: left;
@@ -1232,6 +1302,73 @@ input {
         text-transform: uppercase;
         opacity: 0.67;
         color: @white-color;
+      }
+
+      .crd-front {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        background: url("../images/cardbg.png") no-repeat center;
+        padding: 20px;
+        border-radius: 20px;
+        background-size: cover;
+        position: absolute;
+      }
+      .crd-back {
+        float: left;
+        width: 100%;
+        height: 100%;
+        background: #000526;
+        border-radius: 20px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        display: none;
+
+        .crd-bt {
+          padding: 20px 20px;
+          transform: matrix(-1, 0, 0, 1, 0, 0);
+
+          .crdno {
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+          }
+
+          .crd-mode {
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+          }
+        }
+
+        .cvvshowsec {
+          float: left;
+          width: 100%;
+          height: 40px;
+          margin-top: 24px;
+          background: linear-gradient(
+            90deg,
+            #ffffff96 0%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          padding: 10px 20px;
+          transform: matrix(-1, 0, 0, 1, 0, 0);
+
+          p {
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+            color: @white-color;
+            font-size: 12px;
+            line-height: 16px;
+
+            .cvvtxt {
+              margin-right: 20px;
+            }
+          }
+        }
+
+        .showcvv,
+        .crd-bt {
+          transform: matrix(-1, 0, 0, 1, 0, 0);
+        }
       }
     }
 
@@ -1275,6 +1412,7 @@ input {
             display: inline-block;
             position: absolute;
             right: 20px;
+            top: 25px;
             transform: rotate(-90deg);
           }
         }
@@ -1339,6 +1477,16 @@ input {
   }
 }
 
+.btn-fill {
+  background: @white-color !important;
+  border: 1px solid @lynk-color;
+  color: @lynk-color !important;
+  margin-top: 15px;
+  &:after {
+    background: url("../images/nxt-blue.svg") no-repeat center;
+  }
+}
+
 .crdbxactive .crdbx-tlt {
   &:after {
     content: "";
@@ -1348,7 +1496,7 @@ input {
     display: inline-block;
     position: absolute;
     right: 20px;
-    transform: rotate(0deg) !important;
+    transform: rotate(180deg) !important;
   }
 }
 
@@ -1813,6 +1961,10 @@ input {
     float: left;
     width: 440px;
 
+    @media only screen and (max-width: 600px) {
+      transform: scale(0.8);
+    }
+
     .pop-tlt-sec {
       background: @tab-bg;
       padding: 20px 30px;
@@ -1991,6 +2143,38 @@ input {
   &:before {
     content: "";
     background: url("../images/phone.svg") no-repeat center;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    position: absolute;
+    bottom: 7px;
+    left: 6px;
+  }
+
+  input {
+    box-shadow: none !important;
+    font-size: 14px;
+    line-height: 17px;
+    color: #131313;
+    border: none;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    font-family: @font-ilisar;
+  }
+}
+
+.cardno {
+  float: left;
+  width: 100%;
+  padding-left: 24px;
+  position: relative;
+  border-bottom: 1px solid #6663771f;
+  margin-bottom: 26px;
+
+  &:before {
+    content: "";
+    background: url("../images/credit-card.svg") no-repeat center;
     width: 16px;
     height: 16px;
     display: inline-block;
@@ -2349,6 +2533,10 @@ input {
   margin-top: 90px;
   padding-left: 30px;
   padding-right: 30px;
+
+  @media only screen and (max-width: 600px) {
+    margin-top: 40px;
+  }
 }
 
 .profile-dlt-container {
@@ -2536,4 +2724,118 @@ input {
   width: auto;
   top: 0;
   margin: 0;
+}
+
+.lostbx {
+  .lost-tlt {
+    margin: 0 !important;
+    font-weight: 600 !important;
+    line-height: 16px !important;
+    font-family: @font-ilisar !important;
+  }
+}
+
+.card-lost-dlts {
+  float: left;
+  width: 100%;
+  border: 1px solid @border-color;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-top: 20px;
+
+  p {
+    font-weight: normal;
+    color: @card-tlt !important;
+    font-size: 14px !important;
+    line-height: 17px !important;
+    color: #7f8ea2 !important;
+    margin-bottom: 10px;
+    margin-top: 0 !important;
+  }
+
+  .crdno {
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    span {
+      &:first-child {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        font-family: @font-ilisar_light;
+        color: @txt-color;
+      }
+      &:last-child {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        font-family: @font-ibm;
+        letter-spacing: 1px;
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+.confirm-type-sec {
+  float: left;
+  width: 100%;
+  margin-bottom: 30px;
+
+  .blkbx {
+    float: left;
+    width: 100%;
+    border: 1px solid #4d7ff775;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    label {
+      margin: 0;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 16px;
+      font-family: @font-ilisar;
+      color: @txt-color;
+    }
+  }
+
+  .custom-switch {
+    float: left;
+    width: auto;
+
+    input,
+    label {
+      box-shadow: none !important;
+
+      &::before {
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+.mob-toggle {
+  float: left;
+  width: 100%;
+  background: url("../images/hamburger.svg") no-repeat center;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  position: relative;
+  top: 20px;
+  left: 15px;
+  cursor: pointer;
+}
+
+.mob-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #0000002e;
+  top: 0;
 }

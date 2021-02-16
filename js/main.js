@@ -1,8 +1,15 @@
 $(document).ready(function () {
 
     $(".trans-bx .trans-tp").click(function () {
-        $(this).parent().toggleClass("transbx-active");
-        $(this).parent().find(".trans-drop").slideToggle();
+        if ($(this).parent().hasClass("transbx-active")) {
+            $(this).parent().removeClass("transbx-active");
+            $(this).parent().find(".trans-drop").slideUp();
+        } else {
+            $(".trans-tp").parent().removeClass("transbx-active");
+            $(".trans-drop").slideUp();
+            $(this).parent().addClass("transbx-active");
+            $(this).parent().find(".trans-drop").slideDown();
+        }
     });
 
     $(".notifi").click(function () {
@@ -110,19 +117,15 @@ $(document).ready(function () {
     });
 
     // show cvv
-    $(".cvvs").click(function () {
-
-
-        if ($(this).hasClass("hidecvvs")) {
-            $(this).removeClass("hidecvvs");
-            $(this).text("Show CVV & Date");
-            $(".showedcvv").css("display", "none");
-        } else {
-            $(this).addClass("hidecvvs");
-            $(".showedcvv").css("display", "flex");
-            $(this).text("Hide CVV & Date");
-        }
+    $(".shcvv").click(function () {
+        $(".crd-front").fadeOut();
+        $(".crd-back").fadeIn().css("display", "flex");
     });
+
+    $(".hidecvv").click(function () {
+        $(".crd-back").fadeOut();
+        $(".crd-front").fadeIn().css("display", "flex");
+    })
 
     // range slider
 
